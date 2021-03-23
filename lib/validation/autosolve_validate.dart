@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
-
+import 'dart:io';
 import 'package:autosolve_client/autosolve_options.dart';
 import 'package:autosolve_client/model/validation_response_model.dart';
 import 'package:http/http.dart' as http;
@@ -18,7 +18,7 @@ class AutoSolveValidate {
       return validationError();
     });
     Response response =
-        await http.get(buildValidationUrl(options)).catchError((onError) {
+        await http.get(Uri.parse(buildValidationUrl(options))).catchError((onError) {
       print("Error in validation");
     });
     timer.cancel();

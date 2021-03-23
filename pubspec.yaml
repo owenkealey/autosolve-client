@@ -16,7 +16,7 @@ dependencies:
   synchronized: ^2.2.0+2
   random_string: ^2.1.0
   eventify: ^0.1.4
-  http: ^0.12.2
+  http: ^0.13.0
 
 dev_dependencies:
   flutter_test:
